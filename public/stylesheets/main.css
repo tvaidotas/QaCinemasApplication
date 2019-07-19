@@ -1,0 +1,104 @@
+html {
+    background: #eee;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    align-content: center;
+    margin-top: 10vh;
+}
+
+.error {
+    color: red;
+}
+
+.flex{
+    display: flex;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: deepskyblue;
+}
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: white;
+    color: black;
+}
+
+header h1 {
+    padding: 0.4em 1.1em;
+    color: white;
+    font-weight: normal;
+    font-size: 24px;
+}
+
+section#main {
+    position: relative;
+    padding: 5em 2em;
+    border-bottom: 1px solid #ccc;
+}
+
+label{
+    text-align: center;
+    align-content: center;
+    padding-left: 15vw;
+}
+
+section#main .topRight {
+    position: absolute;
+    right: 20px;
+    top: 70px;
+}
+
+table.computers em {
+    color: #aaa;
+}
+
+table.computers .col3, table.computers .col4 {
+    width: 10%;
+    min-width: 100px;
+}
+
+table.computers .col5 {
+    width: 30%;
+    min-width: 300px;
+}
+
+table.computers .header a {
+}
+
+#actions {
+    position: relative;
+}
+
+#actions #add {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+#pagination {
+    position: relative;
+}
+
+#pagination ul {
+    position: absolute;
+    right: 0;
+}
+
+#pagination ul .current a {
+    color: #666;
+}
