@@ -3,7 +3,7 @@ html {
     margin-left: 20vw;
     margin-right: 20vw;
     align-content: center;
-    margin-top: 10vh;
+    margin-top: 20vh;
 }
 
 .error {
@@ -105,5 +105,4 @@ table.computers .header a {
 
 .mainContent{
     background: #eee;
-    margin-top: 50px;
 }
