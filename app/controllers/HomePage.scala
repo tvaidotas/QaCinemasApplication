@@ -9,4 +9,18 @@ class HomePage extends Controller {
     Ok(views.html.index("Your new application is ready."))
   }
 
+  def aboutUs = Action {
+    Ok(views.html.aboutUs("Your new application is ready."))
+  }
+
+  def contactUs = Action {
+    Ok(views.html.contactUs("Your new application is ready."))
+  }
+
+  def login = Action {
+    Ok(views.html.login("Your new application is ready."))
+  }
+
+
+
 }
