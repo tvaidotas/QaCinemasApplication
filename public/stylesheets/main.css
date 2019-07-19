@@ -14,7 +14,8 @@ html {
     display: flex;
 }
 
-.topnav {
+
+.topnav{
     overflow: hidden;
     background-color: deepskyblue;
 }
@@ -39,7 +40,6 @@ html {
 }
 
 header h1 {
-    padding: 0.4em 1.1em;
     color: white;
     font-weight: normal;
     font-size: 24px;
@@ -105,4 +105,11 @@ table.computers .header a {
 
 .mainContent{
     background: #eee;
+    color: black;
+    font-size: 12px;
+}
+
+.fill{
+    color: black;
+    background-color: #aaaaaa;
 }
