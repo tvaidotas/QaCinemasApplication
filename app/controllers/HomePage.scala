@@ -17,6 +17,10 @@ class HomePage extends Controller {
     Ok(views.html.contactUs("Your new application is ready."))
   }
 
+  def openTimes = Action {
+    Ok(views.html.openingTimes("Test"))
+  }
+
   def newReleses = Action {
     Ok(views.html.newRelesesGallery())
   }
