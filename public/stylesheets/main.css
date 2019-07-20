@@ -3,7 +3,8 @@ html {
     margin-left: 20vw;
     margin-right: 20vw;
     align-content: center;
-    margin-top: 30vh;
+    margin-top: 20vh;
+    margin-bottom : 20vh
 }
 
 .error {
