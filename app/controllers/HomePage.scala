@@ -17,6 +17,14 @@ class HomePage extends Controller {
     Ok(views.html.contactUs("Your new application is ready."))
   }
 
+  def newReleses = Action {
+    Ok(views.html.newRelesesGallery())
+  }
+
+  def allFilms = Action {
+    Ok(views.html.allFilmsGallery())
+  }
+
   def login = Action {
     Ok(views.html.login("Your new application is ready."))
   }

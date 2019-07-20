@@ -7,6 +7,20 @@ html {
     margin-bottom : 20vh
 }
 
+.filmpanel{
+    text-align: center;
+    background-color: deepskyblue;
+    margin : auto;
+    width: 30%;
+    border: #000000;
+    border-radius: 50px;
+    border-style: groove;
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
 .error {
     color: red;
 }
