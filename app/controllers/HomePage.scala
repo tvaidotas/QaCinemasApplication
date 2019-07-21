@@ -30,7 +30,8 @@ class HomePage extends Controller {
   }
 
   def errorPage = Action {
-    Ok(views.html.errorPage("Error Message Here"))
+    Ok(views.html.errorPage())
+
   }
 
   def login = Action {
