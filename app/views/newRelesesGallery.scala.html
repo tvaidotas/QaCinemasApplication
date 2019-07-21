@@ -5,12 +5,15 @@
 
 
     <div class="flex">
-    @for(i <- 0 to 5){
+    @for(i <- 99 to 94 by -1){
         @if(i % 3==0){
                 </div>
                 <div class="flex">
             }
-        <div class="filmpanel">Film @i </div>
+                <div class="filmpanel">
+                    <h3>Film @i </h3>
+                    <img width="150" height="200" src="https://upload.wikimedia.org/wikipedia/en/c/c3/Jaws_3d.jpg"/>
+                </div>
     }
     </div>
     </br></br>
