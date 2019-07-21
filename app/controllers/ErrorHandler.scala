@@ -12,7 +12,7 @@ class ErrorHandler extends HttpErrorHandler {
 
   def onClientError(request: RequestHeader, statusCode: Int, message: String): Future[Result] = {
     Future.successful(
-      Redirect("/")
+      Redirect("/errorpage")
     )
   }
 

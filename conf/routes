@@ -8,8 +8,8 @@ GET     /aboutus                         controllers.HomePage.aboutUs
 GET     /contactus                         controllers.HomePage.contactUs
 GET     /newrelese                         controllers.HomePage.newReleses
 GET     /allfilms                        controllers.HomePage.allFilms
-
 GET     /opentimes                        controllers.HomePage.openTimes
+GET     /errorpage                        controllers.HomePage.errorPage
 
 
 GET     /login                           controllers.HomePage.login

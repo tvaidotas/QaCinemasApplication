@@ -29,6 +29,10 @@ class HomePage extends Controller {
     Ok(views.html.allFilmsGallery())
   }
 
+  def errorPage = Action {
+    Ok(views.html.errorPage("Error Message Here"))
+  }
+
   def login = Action {
     Ok(views.html.login("Your new application is ready."))
   }
