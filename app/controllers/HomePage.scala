@@ -6,6 +6,8 @@ import play.api.mvc._
 class HomePage extends Controller {
 
 
+  val allFilmsList :List[String] = List[String]("1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16")
+
   def index = Action {
     Ok(views.html.index("Your new application is ready."))
   }
@@ -23,11 +25,11 @@ class HomePage extends Controller {
   }
 
   def newReleses = Action {
-    Ok(views.html.newRelesesGallery())
+    Ok(views.html.newRelesesGallery(allFilmsList))
   }
 
   def allFilms = Action {
-    Ok(views.html.allFilmsGallery())
+    Ok(views.html.allFilmsGallery(allFilmsList))
   }
 
   def errorPage = Action {

@@ -1,16 +1,17 @@
-
+@(implicit test :List[String] = List("Jaws 3D","Titan Fall 2","Film 3","Film 4" ,"Film 5","Lego Star Wars"))
 
 @main("QA Cinema") {
     <h1>All Film DB</h1>
 
     <div class="flex">
-    @for(i <- 93 to 0 by -1){
+    @for(i <- test.length-5 to 1 by -1){
+        @println(i)
         @if(i % 3==0){
-                </div>
-                <div class="flex">
-            }
+        </div>
+    <div class="flex">
+    }
         <div class="filmpanel">
-            <h3>Film @i </h3>
+            <h3>@test(i-1) </h3>
             <img width="150" height="200" src="https://upload.wikimedia.org/wikipedia/en/c/c3/Jaws_3d.jpg"/>
         </div>
     }
