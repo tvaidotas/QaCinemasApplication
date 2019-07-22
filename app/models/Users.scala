@@ -15,4 +15,8 @@ object Users{
     Users("admin", "admin"),
     Users("pleb", "plebian")
   )
+
+  def checkUser(username: String) = {
+    Some(validUsers.filter(user => user.uName == username).head)
+  }
 }

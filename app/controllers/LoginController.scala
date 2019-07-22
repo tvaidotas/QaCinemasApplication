@@ -13,7 +13,7 @@ class LoginController @Inject()(val messagesApi: MessagesApi, environment: play.
       BadRequest(views.html.login(formWithErrors))
     }, { login =>
       if(Users.validUsers.contains(login)) {
-        Redirect("/").withSession("login" -> "true")
+        Redirect("/").withSession("name" -> s"${login.uName}")
       }
       else{
         Redirect("/login")
