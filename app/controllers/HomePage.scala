@@ -8,9 +8,4 @@ class HomePage extends Controller {
   def index = Action {
     Ok(views.html.index("Your new application is ready."))
   }
-
-  def errorPage = Action {
-    Ok(views.html.errorPage())
-
-  }
 }
