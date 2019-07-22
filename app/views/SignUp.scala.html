@@ -1,13 +1,13 @@
 @(form: Form[UsersSignUp])(implicit messages: Messages)
 
 @main("Login"){
-    <h1>SignUp page</h1>
+    <h1>Signup page</h1>
     
-    @helper.form(routes.LoginController.logIn()) {
+    @helper.form(routes.SignUpController.signUp()) {
         @helper.inputText(form("name"), '_label -> "Username", '_showConstraints -> false)
         @helper.inputPassword(form("password"), '_label -> "Password" , '_showConstraints -> false)
         @helper.inputText(form("postcode"), '_label -> "Postcode" , '_showConstraints -> false)
         @helper.inputText(form("house_no"), '_label -> "House Number" , '_showConstraints -> false)
-        <button type="submit">Login</button>
+        <button type="submit">Sign Up</button>
     }
 }
