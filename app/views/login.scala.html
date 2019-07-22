@@ -1,5 +1,15 @@
-@(message: String)
+@(form: Form[Users])(implicit messages: Messages)
 
-@main("QA Cinema") {
-    <h1>Login</h1>
+@main("Login"){
+    <h1>Log in page</h1>
+
+
+    @helper.form(routes.LoginController.logIn()) {
+        @* an example of how we can pass additional arguments for the helper
+        in this CD example having '_showConstraints -> false will hide the requirement Required *@
+        @helper.inputText(form("name"), '_label -> "Username", '_showConstraints -> false)
+        @helper.inputPassword(form("password"), '_label -> "Password" , '_showConstraints -> false)
+        <button type="submit">Login</button>
+    }
+
 }
