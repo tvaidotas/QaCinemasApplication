@@ -1,13 +1,13 @@
-@(implicit test :List[String] = List("Jaws 3D","Titan Fall 2","Film 3","Film 4" ,"Film 5","Lego Star Wars"))
+@(implicit test: List[String] = List("Jaws 3D", "Titan Fall 2", "Film 3", "Film 4", "Film 5", "Lego Star Wars"))
 
 
-    @main("QA Cinema") {
+@main("QA Cinema") {
     <h1>New Releases</h1>
 
     <div class="flex">
-    @for(i <- test.length to test.length-2 by -1){
+    @for(i <- test.length to test.length - 2 by -1) {
         <div class="filmpanel">
-            <h3>@test(i-1) </h3>
+            <h3>@test(i - 1) </h3>
             <img width="150" height="200" src="https://upload.wikimedia.org/wikipedia/en/c/c3/Jaws_3d.jpg"/>
             <h5>Description Text</h5>
         </div>
@@ -15,14 +15,14 @@
     </div>
 
     <div class="flex">
-    @for(i <- test.length-3 to test.length-5 by -1){
+    @for(i <- test.length - 3 to test.length - 5 by -1) {
         <div class="filmpanel">
-            <h3>@test(i-1) </h3>
+            <h3>@test(i - 1) </h3>
             <img width="150" height="200" src="https://upload.wikimedia.org/wikipedia/en/c/c3/Jaws_3d.jpg"/>
             <h5>Description Text</h5>
         </div>
     }
     </div>
 
-    </br></br>
+    </br> </br>
 }
