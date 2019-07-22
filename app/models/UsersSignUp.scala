@@ -1,15 +1,19 @@
 package models
-import play.api.data._
+
+import play.api.data.Form
+import play.api.data.Forms.mapping
 import play.api.data.Forms._
 import scala.collection.mutable.ArrayBuffer
 
-case class Users(uName: String, pWord: String)
-object Users{
-  val loginForm = Form (
+case class UsersSignUp(uName: String, pWord: String ,postCode: String,houseNo: String)
+object UsersSignUp{
+  val signUpForm = Form (
     mapping(
       "name" -> nonEmptyText,
-      "password" -> nonEmptyText
-    )(Users.apply)(Users.unapply)
+      "password" -> nonEmptyText,
+      "postcode" -> nonEmptyText,
+      "house_no" -> nonEmptyText
+    )(UsersSignUp.apply)(UsersSignUp.unapply)
   )
 
   val validUsers = ArrayBuffer[Users](
