@@ -9,6 +9,4 @@ class Login extends Controller {
     Ok(views.html.login("Your new application is ready."))
   }
 
-
-
 }
