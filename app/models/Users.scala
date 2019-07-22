@@ -14,12 +14,12 @@ object Users{
     )(Users.apply)(Users.unapply)
   )
 
-  val validUsers = ArrayBuffer[Users](
+  var validUsers = ArrayBuffer[Users](
     Users("admin", "admin"),
     Users("pleb", "plebian")
   )
 
-  val UsedUserNames = List[String]("admin", "pleb")
+  var UsedUserNames = List[String]("admin", "pleb")
 
   def checkUser(username: String) = {
     Some(validUsers.filter(user => user.uName == username).head)
