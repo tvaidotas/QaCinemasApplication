@@ -1,0 +1,14 @@
+package controllers
+
+import play.api._
+import play.api.mvc._
+
+class AboutUs extends Controller {
+
+
+  val allFilmsList :List[String] = List[String]("1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18")
+
+  def aboutUs = Action {
+    Ok(views.html.aboutUs("Your new application is ready."))
+  }
+}
