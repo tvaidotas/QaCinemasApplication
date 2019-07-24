@@ -7,6 +7,10 @@ html {
     margin-bottom : 20vh
 }
 
+label{
+    color: black;
+}
+
 .filmpanel{
     text-align: center;
     background-color: deepskyblue;
