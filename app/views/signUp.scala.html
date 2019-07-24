@@ -4,13 +4,14 @@
     <h1>Signup page</h1>
 
     @helper.form(routes.SignUpController.signUp()) {
+        <div class="fill center">
         @helper.inputText(form("fName"), '_label -> "Forename", '_showConstraints -> false)
         @helper.inputText(form("lName"), '_label -> "Surname", '_showConstraints -> false)
-        @helper.inputText(form("uName"), '_label -> "Username", '_showConstraints -> false)
         @helper.inputText(form("email"), '_label -> "Email", '_showConstraints -> false)
         @helper.inputPassword(form("password"), '_label -> "Password" , '_showConstraints -> false)
         @helper.inputText(form("postcode"), '_label -> "Postcode" , '_showConstraints -> false)
         @helper.inputText(form("address"), '_label -> "Address" , '_showConstraints -> false)
-        <button type="submit">Sign Up</button>
+        <button class="btn btn-primary" type="submit">Sign Up</button>
+        </div>
     }
 }

@@ -27,6 +27,8 @@ label{
 
 .error {
     color: red;
+    align-content: center;
+    text-align: center;
 }
 
 .flex{

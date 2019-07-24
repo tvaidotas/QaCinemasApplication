@@ -12,16 +12,16 @@ class SignUpController @Inject()(val messagesApi: MessagesApi, environment: play
     UsersSignUp.signUpForm.bindFromRequest.fold({ formWithErrors =>
       BadRequest(views.html.signUp(formWithErrors))
     }, {signup =>
-      if(Users.UsedUserNames.contains(signup.uName)) {
+      if(Users.UsedUserNames.contains(signup.email)) {
         println("USERNAME USED")
         Redirect("/signup")
       }
       else{
         println(Users.UsedUserNames)
-        println(signup.uName)
+        println(signup.email)
         //TODO Add user to DB and redirect to login
-        Users.validUsers = Users.validUsers :+ Users(signup.uName ,signup.pWord)
-        Users.UsedUserNames = Users.UsedUserNames :+ signup.uName
+        Users.validUsers = Users.validUsers :+ Users(signup.email ,signup.pWord)
+        Users.UsedUserNames = Users.UsedUserNames :+ signup.email
         println(Users.validUsers)
         Redirect("/login")
       }
