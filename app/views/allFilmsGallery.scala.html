@@ -3,9 +3,9 @@
 @main("QA Cinema") {
     <h1>All Film DB</h1>
 
-    <div class="test-overflow-wrap">
+    <div class="film-flex-container">
         @for(film <- filmList) {
-            <div class="filmpanel">
+            <div class="film-panel">
                 <h3>@film.getTitle()</h3>
                 <img width="150" height="200" src="@film.getPosterUrl()"/>
                 <h5>@film.getDescription()</h5>
