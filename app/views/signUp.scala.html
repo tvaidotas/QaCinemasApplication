@@ -1,7 +1,6 @@
 @(form: Form[UsersSignUp])(implicit messages: Messages)
 
 @main("SignUp"){
-    <h1>Signup page</h1>
 
     @helper.form(routes.SignUpController.signUp()) {
         <div class="fill center">

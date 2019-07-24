@@ -9,7 +9,7 @@ case class Users(uName: String, pWord: String)
 object Users{
   val loginForm = Form (
     mapping(
-      "name" -> nonEmptyText,
+      "email" -> nonEmptyText,
       "password" -> nonEmptyText
     )(Users.apply)(Users.unapply)
   )

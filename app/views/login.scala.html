@@ -1,11 +1,10 @@
 @(form: Form[Users])(implicit messages: Messages)
 
 @main("Login"){
-    <h1>Login page</h1>
 
     @helper.form(routes.LoginController.logIn()) {
         <div class="fill">
-        @helper.inputText(form("name"), '_label -> "Email", '_showConstraints -> false)
+        @helper.inputText(form("email"), '_label -> "Email", '_showConstraints -> false)
         @helper.inputPassword(form("password"), '_label -> "Password" , '_showConstraints -> false)
         <button class="btn btn-primary" type="submit">Login</button>
         </div>
