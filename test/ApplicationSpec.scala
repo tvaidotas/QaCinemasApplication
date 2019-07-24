@@ -14,14 +14,47 @@ import play.api.test.Helpers._
 class ApplicationSpec extends Specification {
 
   "Application" should {
-
     "send 404 on a bad request" in new WithApplication{
       route(FakeRequest(GET, "/boum")) must beNone
     }
-
     "render the index page" in new WithApplication{
       val home = route(FakeRequest(GET, "/")).get
+      status(home) must equalTo(OK)
+      contentType(home) must beSome.which(_ == "text/html")
+      contentAsString(home) must contain ("Your new application is ready.")
+    }
+  }
 
+  "all films" should {
+    "send 404 on a bad request" in new WithApplication{
+      route(FakeRequest(GET, "/boum")) must beNone
+    }
+    "render the index page" in new WithApplication{
+      val home = route(FakeRequest(GET, "/allfilms")).get
+      status(home) must equalTo(OK)
+      contentType(home) must beSome.which(_ == "text/html")
+      contentAsString(home) must contain ("Your new application is ready.")
+    }
+  }
+
+  "about us" should {
+    "send 404 on a bad request" in new WithApplication{
+      route(FakeRequest(GET, "/boum")) must beNone
+    }
+    "render the index page" in new WithApplication{
+      val home = route(FakeRequest(GET, "/aboutus")).get
+      status(home) must equalTo(OK)
+      contentType(home) must beSome.which(_ == "text/html")
+      contentAsString(home) must contain ("Your new application is ready.")
+    }
+  }
+
+  "contact us" should {
+    "send 404 on a bad request" in new WithApplication{
+      route(FakeRequest(GET, "/boum")) must beNone
+    }
+    "render the index page" in new WithApplication{
+      val home = route(FakeRequest(GET, "/contactus")).get
       status(home) must equalTo(OK)
       contentType(home) must beSome.which(_ == "text/html")
       contentAsString(home) must contain ("Your new application is ready.")
