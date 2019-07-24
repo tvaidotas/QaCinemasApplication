@@ -4,7 +4,7 @@
     <div class="film-details-main container">
         <div class="film-title-container row">
             <div class="col-12">
-                <h1>@film.getTitle()</h1>
+                <h1 class="film-details-title-tag">@film.getTitle()</h1>
             </div>
         </div>
         <div class="film-poster-description-container row">
@@ -20,6 +20,7 @@
                 <!-- film release date -->
                 <!-- film main actors -->
                 <div>Release Date: @film.getReleaseDate()</div>
+                <br />
                 <p>Main Actors:</p>
                 <ul>
                     @for(actor <- film.getMainActors()) {
@@ -27,10 +28,10 @@
                     }
                 </ul>
             </div>
-            <div class="col-4">
+            <div class="col-4 film-details-button-container">
                 <button class="btn btn-primary">Book Now</button>
             </div>
-            <div class="col-4">
+            <div class="col-4 film-details-button-container">
                 <button class="btn btn-primary">Add to my List</button>
             </div>
         </div>

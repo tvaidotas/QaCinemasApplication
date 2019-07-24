@@ -14,3 +14,11 @@
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+.film-details-title-tag {
+    text-align: center;
+}
+
+.film-details-button-container {
+    align-self: flex-end;
+}
