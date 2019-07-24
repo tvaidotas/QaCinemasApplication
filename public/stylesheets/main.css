@@ -7,7 +7,13 @@ html {
     margin-bottom : 20vh
 }
 
+
+label{
+    color: black;
+}
+
 .film-panel{
+>>>>>>> origin/master
     text-align: center;
     background-color: deepskyblue;
     margin : auto;
