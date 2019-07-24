@@ -3,7 +3,7 @@
 @main("SignUp"){
 
     @helper.form(routes.SignUpController.signUp()) {
-        <div class="fill center">
+        <div class="fill text-center">
         @helper.inputText(form("fName"), '_label -> "Forename", '_showConstraints -> false)
         @helper.inputText(form("lName"), '_label -> "Surname", '_showConstraints -> false)
         @helper.inputText(form("email"), '_label -> "Email", '_showConstraints -> false)
