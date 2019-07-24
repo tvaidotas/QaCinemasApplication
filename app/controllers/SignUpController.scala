@@ -19,11 +19,11 @@ class SignUpController @Inject()(val messagesApi: MessagesApi, environment: play
       else{
         println(Users.UsedUserNames)
         println(signup.uName)
-        //TODO Add user to DB and login or redirect to login
+        //TODO Add user to DB and redirect to login
         Users.validUsers = Users.validUsers :+ Users(signup.uName ,signup.pWord)
         Users.UsedUserNames = Users.UsedUserNames :+ signup.uName
         println(Users.validUsers)
-        Redirect("/").withSession("name" -> s"${signup.uName}")
+        Redirect("/login")
       }
     })
   }
