@@ -7,6 +7,7 @@ import play.api.mvc._
 
 class AllFilmsGallery extends Controller {
   def allFilms = Action {
+
     Ok(views.html.allFilmsGallery(PlaceholderDatabase.allFilmsList))
   }
 
