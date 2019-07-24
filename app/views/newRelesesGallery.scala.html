@@ -1,4 +1,4 @@
-@(implicit filmList: List[Film] = List(new Film(0, "error", "error", "error", "error")))
+@(implicit filmList: List[Film] = List(new Film(0, "error", "error", "error", "error", "12-06-2000", List("Arnold", "John", "James"))))
 
 
 @main("QA Cinema") {
@@ -6,11 +6,11 @@
 
     <div class="film-flex-container">
         @for(film <- filmList.takeRight(6).reverse) {
-            <div class="film-panel">
+            <a href='/filmdetails/@(film.getId)' class="film-panel">
                 <h3>@film.getTitle()</h3>
                 <img width="150" height="200" src="@film.getPosterUrl()"/>
                 <h5>@film.getDescription()</h5>
-            </div>
+            </a>
         }
     </div>
 

@@ -1,6 +1,39 @@
 @(film: Film)
 
 @main(film.getTitle()) {
-    <p>@film.getTitle()</p>
-    <p>@film.getDescription()</p>
+    <div class="film-details-main container">
+        <div class="film-title-container row">
+            <div class="col-12">
+                <h1>@film.getTitle()</h1>
+            </div>
+        </div>
+        <div class="film-poster-description-container row">
+            <div class="col-4">
+                <img width="150" height="200" src="@film.getPosterUrl()">
+            </div>
+            <div class="col-8">
+                <p>@film.getDescription()</p>
+            </div>
+        </div>
+        <div class="film-release-credits-booking-container row">
+            <div class="col-4">
+                <!-- film release date -->
+                <!-- film main actors -->
+                <div>Release Date: @film.getReleaseDate()</div>
+                <p>Main Actors:</p>
+                <ul>
+                    @for(actor <- film.getMainActors()) {
+                        <li>@actor</li>
+                    }
+                </ul>
+            </div>
+            <div class="col-4">
+                <button class="btn btn-primary">Book Now</button>
+            </div>
+            <div class="col-4">
+                <button class="btn btn-primary">Add to my List</button>
+            </div>
+        </div>
+
+    </div>
 }

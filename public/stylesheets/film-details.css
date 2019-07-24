@@ -1,0 +1,16 @@
+.film-details-main {
+    width: 100%;
+    background-color: deepskyblue;
+    border-radius: 50px;
+    border-style: groove;
+}
+
+.film-title-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.film-release-credits-booking-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

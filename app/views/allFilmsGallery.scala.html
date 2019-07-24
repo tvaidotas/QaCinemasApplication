@@ -5,11 +5,11 @@
 
     <div class="film-flex-container">
         @for(film <- filmList) {
-            <div class="film-panel">
-                <h3>@film.getTitle()</h3>
-                <img width="150" height="200" src="@film.getPosterUrl()"/>
-                <h5>@film.getDescription()</h5>
-            </div>
+            <a href='/filmdetails/@(film.getId)' class="film-panel">
+                    <h3>@film.getTitle()</h3>
+                    <img width="150" height="200" src="@film.getPosterUrl()"/>
+                    <h5>@film.getDescription()</h5>
+            </a>
         }
     </div>
     </br> </br>
