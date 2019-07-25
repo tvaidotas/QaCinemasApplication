@@ -10,6 +10,7 @@ GET        /newrelese           controllers.NewRelesesGallery.newReleses
 GET        /allfilms            controllers.AllFilmsGallery.allFilms
 GET        /opentimes           controllers.OpeningTimes.openTimes
 GET        /errorpage           controllers.ErrorPage.errorPage
+GET        /filmdetails/:id     controllers.FilmDetails.filmDetails(id)
 
 
 GET        /login               controllers.LoginController.logIn

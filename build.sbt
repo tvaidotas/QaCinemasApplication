@@ -15,5 +15,7 @@ unmanagedResourceDirectories in Test <+=  baseDirectory ( _ /"target/web/public/
 //MongoDB
 libraryDependencies += "org.mongodb.scala" %% "mongo-scala-driver" % "2.6.0"
 
+libraryDependencies += "org.seleniumhq.selenium" % "selenium-java" % "2.35.0" % "test"
+
 
       
