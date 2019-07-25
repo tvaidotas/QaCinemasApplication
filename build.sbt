@@ -20,5 +20,7 @@ libraryDependencies += "org.seleniumhq.selenium" % "selenium-java" % "2.35.0" % 
 //Emails
 libraryDependencies += "com.solarmosaic.client" %% "mail-client" % "0.1.0"
 
+libraryDependencies += "org.reactivemongo" %% "reactivemongo" % "0.16.0"
+libraryDependencies +=   "org.slf4j" % "slf4j-log4j12" % "1.7.25"
 
       
