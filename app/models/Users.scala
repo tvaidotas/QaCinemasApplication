@@ -20,8 +20,6 @@ object Users{
     Users("pleb", "plebian")
   )
 
-  var UsedUserNames = List[String]("admin", "pleb")
-
   def checkUser(username: String) = {
     Some(validUsers.filter(user => user.uName == username).head)
   }

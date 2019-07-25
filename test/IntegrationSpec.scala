@@ -1,24 +1,65 @@
 import org.specs2.mutable._
 import org.specs2.runner._
 import org.junit.runner._
+import play.api.mvc._
 
 import play.api.test._
 import play.api.test.Helpers._
 
-/**
- * add your integration spec here.
- * An integration test will fire up a whole play application in a real (or headless) browser
- */
 @RunWith(classOf[JUnitRunner])
-class IntegrationSpec extends Specification {
+class IntegrationSpec extends Specification{
+
+  val urlStart = "http://localhost:"
 
   "Application" should {
-
     "work from within a browser" in new WithBrowser {
+      browser.goTo(urlStart+"9000")
+      browser.pageSource must contain("QA Cinema")
+    }
+  }
 
-      browser.goTo("http://localhost:" + port)
+  "find a film" should {
+    "work from within a browser" in new WithBrowser {
+      browser.goTo(urlStart+"9000/allfilms")
+      browser.pageSource must contain("QA Cinema")
+    }
+  }
 
-      browser.pageSource must contain("Your new application is ready.")
+  "about us" should {
+    "work from within a browser" in new WithBrowser {
+      browser.goTo(urlStart+"9000/aboutus")
+      browser.pageSource must contain("QA Cinema")
+    }
+  }
+
+  "contact us" should {
+    "work from within a browser" in new WithBrowser {
+      browser.goTo(urlStart+"9000/contactus")
+      browser.pageSource must contain("Login")
+    }
+  }
+
+  "contact us" should {
+    "work from within a browser" in new WithBrowser {
+      browser.goTo(urlStart+"9000/contactus")
+//      add cookie ("name", "admin")
+//      cookie("cookie_name").value should be ("cookie_value")
+//      reloadPage()
+      browser.pageSource must contain("Login")
+    }
+  }
+
+  "login" should {
+    "work from within a browser" in new WithBrowser {
+      browser.goTo(urlStart+"9000/login")
+      browser.pageSource must contain("Login")
+    }
+  }
+
+  "signup" should {
+    "work from within a browser" in new WithBrowser {
+      browser.goTo(urlStart+"9000/signup")
+      browser.pageSource must contain("SignUp")
     }
   }
 }
