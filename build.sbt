@@ -17,5 +17,8 @@ libraryDependencies += "org.mongodb.scala" %% "mongo-scala-driver" % "2.6.0"
 
 libraryDependencies += "org.seleniumhq.selenium" % "selenium-java" % "2.35.0" % "test"
 
+//Emails
+libraryDependencies += "com.solarmosaic.client" %% "mail-client" % "0.1.0"
+
 
       
