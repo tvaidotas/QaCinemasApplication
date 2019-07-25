@@ -5,6 +5,7 @@ import play.api.i18n.{I18nSupport, MessagesApi}
 import play.api.mvc._
 import models.UsersSignUp
 import models.Users
+import reactivemongo.bson.BSONDocument
 
 class SignUpController @Inject()(val messagesApi: MessagesApi, environment: play.api.Environment) extends Controller with I18nSupport {
 
@@ -12,7 +13,7 @@ class SignUpController @Inject()(val messagesApi: MessagesApi, environment: play
     UsersSignUp.signUpForm.bindFromRequest.fold({ formWithErrors =>
       BadRequest(views.html.signUp(formWithErrors))
     }, {signup =>
-      if(Users.UsedUserNames.contains(signup.email)) {
+      if(mongo.implementation.BasicOperationsImpl.findUserByName(BSONDocument("email" -> signup.email, "pWord" -> signup.pWord), "Users", "Movies")) {
         println("USERNAME USED")
         Redirect("/signup")
       }
@@ -20,6 +21,7 @@ class SignUpController @Inject()(val messagesApi: MessagesApi, environment: play
         println(Users.UsedUserNames)
         println(signup.email)
         //TODO Add user to DB and redirect to login
+        mongo.implementation.BasicOperationsImpl.insertDocument(BSONDocument("email" -> signup.email, "pWord" -> signup.pWord), "Users", "Movies")
         Users.validUsers = Users.validUsers :+ Users(signup.email ,signup.pWord)
         Users.UsedUserNames = Users.UsedUserNames :+ signup.email
         println(Users.validUsers)

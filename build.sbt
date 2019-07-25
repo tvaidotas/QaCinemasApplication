@@ -14,6 +14,7 @@ unmanagedResourceDirectories in Test <+=  baseDirectory ( _ /"target/web/public/
 
 //MongoDB
 libraryDependencies += "org.mongodb.scala" %% "mongo-scala-driver" % "2.6.0"
-
+libraryDependencies += "org.reactivemongo" %% "reactivemongo" % "0.16.0"
+libraryDependencies +=   "org.slf4j" % "slf4j-log4j12" % "1.7.25"
 
       
