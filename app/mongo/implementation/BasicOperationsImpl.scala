@@ -19,7 +19,6 @@ object BasicOperationsImpl extends DBConnection with BasicOperations {
       case Failure(e) => println(e.printStackTrace())
       case Success(writeResult) =>
         println(Constants.removedDocument.toString + writeResult.ok)
-        closeConnection()
     }
   }
 
@@ -32,7 +31,6 @@ object BasicOperationsImpl extends DBConnection with BasicOperations {
       case Failure(e) => println(e.printStackTrace())
       case Success(writeResult) =>
         println(Constants.insertedDocument.toString + writeResult.ok)
-        closeConnection()
     }
   }
 

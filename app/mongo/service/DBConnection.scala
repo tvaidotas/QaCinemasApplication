@@ -21,6 +21,9 @@ trait DBConnection {
   def getCollection(collectionName: String, dbName: String): BSONCollection =
     getDB(dbName).collection[BSONCollection](collectionName)
 
-  def closeConnection(): Unit = driver.close()
+  def closeConnection(): Unit = {
+    println("Closing connection")
+    driver.close()
+  }
 
 }
